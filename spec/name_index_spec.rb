@@ -1,5 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../name_index')
 
 describe NameIndex do
-  specify { expect(NameIndex.create_index([])).to eq [] }
+  example { expect(NameIndex.create_index(
+        ['キシモト', 'イトウ', 'カネダ'])).to eq(
+      [['ア', ['イトウ']], ['カ', ['カネダ', 'キシモト']]]) }
+
 end
